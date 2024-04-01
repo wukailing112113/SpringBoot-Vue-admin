@@ -4,7 +4,7 @@
 前后端都加以控制,做到按钮/接口级别的权限
 
 # DEMO
-[测试地址](http://g.heeexy.com)
+[测试地址](https://g.heeexy.com)
 
 admin/123456 管理员身份登录,可以新增用户,角色.
 
@@ -44,6 +44,8 @@ v2.0.0  2021.05.09
 @RequiresRoles(value = {"admin","manager","writer"}, logical = Logical.OR) 
 ```
 
+![api权限](https://img.heeexy.com/api-permission.png)
+
 ### 前端
 
 采用了[vueAdmin-template](https://github.com/PanJiaChen/vueAdmin-template) , [ElementUI](https://github.com/ElemeFE/element) , 权限设计思路也是参考了 vueAdmin 的动态路由的设计.
@@ -73,8 +75,8 @@ v2.0.0  2021.05.09
 
 ### 数据库
 最主要的是要有一张本系统内的全部权限明细表,比如下面这样
-![权限表](http://img.heeexy.com/permissionDatabase.png)
-![权限数据](http://img.heeexy.com/permissionData.png)
+![权限表](https://img.heeexy.com/permissionDatabase.png)
+![权限数据](https://img.heeexy.com/permissionData.png)
 
 如果某用户拥有表格中前五条权限,就可以查出他就拥有article和user两个菜单,至于页面内是否显示(新增)(修改)按钮,就根据他的permissionList来判断.
 
@@ -88,4 +90,4 @@ npm run dev
 后端就是常规的shiro配置,前端代码如果看不明白,可以参考[前端权限代码说明](./explain-frontend.md) 
 
 ## 分配权限页面效果
-![分配权限页面](http://img.heeexy.com/role_permission.png)
+![分配权限页面](https://img.heeexy.com/role_permission.png)
